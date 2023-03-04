@@ -1,0 +1,39 @@
+# YAML 1.2
+---
+cff-version: 1.2.0
+title: Learning Molecular Dynamics with LAMMPS
+message: >-
+  If you use this dataset, please cite it using the metadata
+  from this file.
+type: dataset
+authors:
+  - given-names: Axel
+    family-names: Kohlmeyer
+    orcid: 'https://orcid.org/0000-0001-6204-6475'
+  - given-names: Germain
+    family-names: Clavier
+  - given-names: Simon
+    family-names: Gravelle
+  - given-names: Michal
+    family-names: Kanski
+  - given-names: Trung
+    family-names: Nguyen
+  - given-names: Shern
+    family-names: Tee
+
+repository-code: 'https://github.com/lammps/learning/'
+url: 'https://www.lammps.org'
+abstract: >-
+  This is a combination user's guide and tutorial website
+  and document aimed at learning to perform molecular
+  dynamics (MD) simulations and analyze their results with
+  the LAMMPS software package.
+keywords:
+  - Molecular Dynamics
+  - Materials Modeling
+  - Statistical Mechanics
+  - Tutorial
+  - Self-study
+  - User's Guide
+  - Compute Simulations
+license: CC-BY-SA-4.0
