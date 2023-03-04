@@ -22,7 +22,7 @@ authors:
     family-names: Tee
 
 repository-code: 'https://github.com/lammps/learning/'
-url: 'https://www.lammps.org'
+url: 'https://lammps.github.io/learning/'
 abstract: >-
   This is a combination user's guide and tutorial website
   and document aimed at learning to perform molecular

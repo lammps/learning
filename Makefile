@@ -46,7 +46,6 @@ help:
 	@echo "  epub          create ePUB format manual for e-book readers"
 	@echo "  mobi          convert ePUB to MOBI format manual for e-book readers (e.g. Kindle)"
 	@echo "                      (requires ebook-convert tool from calibre)"
-	@echo "  publish       create HTML pages and publish on GitHub"
 	@echo "  clean         remove all intermediate files"
 	@echo "  clean-all     reset the entire build environment"
 	@echo "  anchor_check  scan for duplicate anchor labels"
@@ -155,13 +154,6 @@ link_check : $(VENV) html
 		. $(VENV)/bin/activate ; env PYTHONWARNINGS= PYTHONDONTWRITEBYTECODE=1 \
 		linkchecker -F html --check-extern html/Learning_MD.html ;\
 		deactivate ;\
-	)
-
-publish : $(VENV) html
-	@(\
-	cp $(BUILDDIR)/utils/publish.sh $(BUILDDIR) ; \
-	$(SHELL) $(BUILDDIR)/publish.sh ; \
-	rm $(BUILDDIR)/publish.sh; \
 	)
 
 # ------------------------------------------
