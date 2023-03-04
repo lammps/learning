@@ -1,0 +1,7 @@
+Sphinx
+sphinxcontrib-spelling
+sphinx_tabs
+Pygments
+six
+pyyaml
+linkchecker

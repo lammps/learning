@@ -31,7 +31,6 @@ log.cite
 /*.pdf
 /doctrees
 /docenv
-/utils/sphinx-config/conf.py
 *.el
-/utils/sphinx-config/_static/mathjax
-/utils/sphinx-config/_static/polyfill.js
+/sphinx-config/_static/mathjax
+/utils/LAMMPS_Documentation_Utilities.egg-info

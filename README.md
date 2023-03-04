@@ -81,6 +81,7 @@ installed.  This includes:
 - hyperref
 - hypcap
 - needspace
+- pict2e
 - times
 - tabulary
 - upquote
