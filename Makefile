@@ -34,7 +34,7 @@ endif
 
 SPHINXEXTRA = -j $(shell $(PYTHON) -c 'import multiprocessing;print(multiprocessing.cpu_count())')
 
-.PHONY: help clean-all clean clean-spelling epub mobi html pdf spelling anchor_check char_check role_check fasthtml
+.PHONY: help clean-all clean clean-spelling epub mobi html pdf spelling anchor_check char_check role_check fasthtml publish
 
 # ------------------------------------------
 
@@ -46,7 +46,7 @@ help:
 	@echo "  epub          create ePUB format manual for e-book readers"
 	@echo "  mobi          convert ePUB to MOBI format manual for e-book readers (e.g. Kindle)"
 	@echo "                      (requires ebook-convert tool from calibre)"
-	@echo "  fasthtml      approximate HTML page creation in fasthtml dir (for development)"
+	@echo "  publish       create HTML pages and publish on GitHub"
 	@echo "  clean         remove all intermediate files"
 	@echo "  clean-all     reset the entire build environment"
 	@echo "  anchor_check  scan for duplicate anchor labels"
@@ -144,20 +144,6 @@ anchor_check : $(ANCHORCHECK)
 		deactivate ;\
 	)
 
-style_check : $(VENV)
-	@(\
-		. $(VENV)/bin/activate ; env PYTHONWARNINGS= PYTHONDONTWRITEBYTECODE=1 \
-		python utils/check-styles.py -s ../src -d src ;\
-		deactivate ;\
-	)
-
-package_check : $(VENV)
-	@(\
-		. $(VENV)/bin/activate ; env PYTHONWARNINGS= PYTHONDONTWRITEBYTECODE=1 \
-		python utils/check-packages.py -s ../src -d src ;\
-		deactivate ;\
-	)
-
 char_check :
 	@( env LC_ALL=C grep -n '[^ -~]' $(RSTDIR)/*.rst && exit 1 || : )
 
@@ -169,6 +155,13 @@ link_check : $(VENV) html
 		. $(VENV)/bin/activate ; env PYTHONWARNINGS= PYTHONDONTWRITEBYTECODE=1 \
 		linkchecker -F html --check-extern html/Learning_MD.html ;\
 		deactivate ;\
+	)
+
+publish : $(VENV) html
+	@(\
+	cp $(BUILDDIR)/utils/publish.sh $(BUILDDIR) ; \
+	$(SHELL) $(BUILDDIR)/publish.sh ; \
+	rm $(BUILDDIR)/publish.sh; \
 	)
 
 # ------------------------------------------

@@ -22,6 +22,8 @@ Thumbs.db
 log.lammps
 log.cite
 
+/.current-branch
+/publish.sh
 /html
 /epub
 /latex
