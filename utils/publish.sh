@@ -5,6 +5,6 @@ git branch --show-current > .current-branch
 git checkout github-docs
 git add html
 git commit -m 'update website'
-git push
+git push origin github-docs
 git checkout `cat .current-branch`
 rm -f .current-branch
