@@ -149,7 +149,7 @@ In your `in.lmp` file, replace the `write_dump` line with the following:
 
 .. code-block:: LAMMPS
 
-   write_dump all custom dump.lammpstrj x y z vx vy vz
+   write_dump all custom dump.lammpstrj id type x y z vx vy vz
 
 Save the file, and run the code as previously:
 
@@ -158,4 +158,23 @@ Save the file, and run the code as previously:
    lmp -i in.lmp
 
 Now the `dump.lammpstrj` file should have changed to the following:
+
+.. code-block:: LAMMPS
+
+  ITEM: TIMESTEP
+  0
+  ITEM: NUMBER OF ATOMS
+  125
+  ITEM: BOX BOUNDS pp pp pp
+  0.0000000000000000e+00 5.0000000000000000e+00
+  0.0000000000000000e+00 5.0000000000000000e+00
+  0.0000000000000000e+00 5.0000000000000000e+00
+  ITEM: ATOMS id type x y z vx vy vz
+  1 1 0 0 0 0 0 0
+  2 1 1 0 0 0 0 0
+  3 1 2 0 0 0 0 0
+  4 1 3 0 0 0 0 0
+  5 1 4 0 0 0 0 0
+  ...
+
 .. _read_data section of the manual: https://docs.lammps.org/read_data.html
