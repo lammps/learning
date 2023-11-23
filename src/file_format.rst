@@ -1,6 +1,6 @@
-==============================
-Running your first simulations
-==============================
+================================
+Introduction to the file formats
+================================
 
 LAMMPS internally keeps track of the evolution of atomistic systems. Such a
 system is described as a `simulation box` containing an ensemble of particles
@@ -10,7 +10,7 @@ position, velocities etc.
 In this section, you will learn how to create a very simple simulation box
 using LAMMPS built-in tools.
 
-Minimal input and file formats
+Running a minimal LAMMPS input
 ------------------------------
 
 In an empty directory, open a text file and copy the following text inside:
@@ -176,5 +176,14 @@ Now the `dump.lammpstrj` file should have changed to the following:
   4 1 3 0 0 0 0 0
   5 1 4 0 0 0 0 0
   ...
+
+You now have different information in your dump file. The `custom` format allows
+you to write every properties of each atoms to the file. There are a series of
+keywords that you can use depending on the `atom_style` and values that you
+can also calculate through the use of LAMMPS computes and variables. More on
+that in later tutorials.
+
+For now on we haven't done much with our atoms. Let's see how to run an actual
+simulation.
 
 .. _read_data section of the manual: https://docs.lammps.org/read_data.html
