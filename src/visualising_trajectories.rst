@@ -1,3 +1,3 @@
 ================================
-Visualising trajectories outputs
+Visualizing trajectories outputs
 ================================

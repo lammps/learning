@@ -2,9 +2,9 @@
 Setting up your first simulations
 =================================
 
-In this section we will modify the input from the previous section to run
+In this section we will modify the input from the previous section to
 integrate the equations of motion of the atoms and have a first look at
-variable and computes use in LAMMPS.
+the use of variables and computes in LAMMPS.
 
 Defining non-bonded interactions
 ********************************
@@ -37,7 +37,7 @@ What this script does is:
 That's it. Nowhere are interaction between atoms defined. As such they do not
 interact with one another. Let's change that.
 
-Edit the `in.lmp` file with the following lines between the `mass` and
+Edit the `in.lmp` file by adding the following lines between the `mass` and
 `write_data` commands:
 
 .. code-block:: LAMMPS
@@ -51,11 +51,11 @@ Edit the `in.lmp` file with the following lines between the `mass` and
    write_data data.lmp
    ...
 
-If you save this file and execute the script in LAMMPS you might think that
+If you save this file and execute the script using LAMMPS, you might think that
 nothing changed, but if you open the data file, you'll notice that a new section
-appeared: `Pair Coeffs # lj/cut`. The comment after the `#` symbol indicates
-which pair style was used when defining the system non-bonded interactions. It
-is only indicative and will not be read by LAMMPS when reading the data file.
+appeared: `Pair Coeffs # lj/cut`. The comment following the `#` symbol indicates
+which pair style was used when defining the non-bonded interactions in the system.
+A line starting with `#` is only indicative and will not be read by LAMMPS.
 However, it will tell you which pair style you should set before reading the
 said file. Here `lj/cut_` is the standard Lennard-Jones potential using a
 cutoff distance. Pair of atoms separated by a distance longer than the cutoff
@@ -67,7 +67,7 @@ will not interact.
 
 The definition of the interaction happens in two steps. First you set an
 interaction style (here a `pair_style`). You then have to define interaction
-coefficients for each types of atoms. Note that the second step must be done
+coefficients for each type of atom. Note that the second step must be done
 **after** the number of `atom types` is defined in the simulation.
 
 It is worth detailing the format of the `pair_coeff` command. It defines
@@ -101,13 +101,13 @@ from chemical information from *real* systems, but they're not necessary
 representative of equilibrium state of the model with the interactions you
 are using. You can end-up in a situation where local structure cause force
 divergence and numerical integration becomes unstable. Bad initial geometry
-is a common problem that many people encounter without realising.
+is a common problem that many people encounter without realizing.
 
 If you are unsure about the situation, it is good practice to minimize the
 energy of your system. Fortunately, LAMMPS allows you to do so. In short, it
 makes atoms slowly go along their energy gradients. By default, the `minimize
 <https://docs.lammps.org/minimize.html>`_ command uses conjugate gradients
-algorith to this end.
+algorithm to this end.
 
 You can add the following line in your `in.lmp` file.
 

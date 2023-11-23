@@ -34,13 +34,13 @@ run the following command to execute LAMMPS with this input:
 
    lmp -i in.lmp
 
-You should see a bunch of line appear in your screen. The first one should start
+You should see a bunch of lines appear in your screen. The first one should start
 with `LAMMPS` followed by a parentheses with the specification of the version
 of the code you are using. The last line should read something like
 `Total wall time: 00:00:00`. If you've never executed LAMMPS before,
-congratulation! This is maybe your first sucessful (very simple) simulation!
+congratulation! This is maybe your first successful (very simple) simulation!
 
-You will also notice that two file appeared in the directory: `data.lmp` and
+You will also notice that two files appeared in the directory: `data.lmp` and
 `dump.lammpstrj`. Let's start by opening the first one.
 
 Data file format
@@ -53,12 +53,12 @@ line and some numbers. Let's slowly go through all of this.
 
 The first part of the file is called `the header`. The first line of the file
 is always a comment that LAMMPS does not read but which can contain
-informations on the way the file was generated. Here we see the LAMMPS version
+information on the way the file was generated. Here we see the LAMMPS version
 and some more information like timestep and units. The following lines contain
 the number of `atoms` (125), the number of `atom types` (1) and three lines
 containing `xlo xhi` like indications. This header is simple, but generally,
-headers can contain much more informations. The first two lines are explicit,
-you define a system with 125 atoms all of which have the same caracteristics.
+headers can contain much more information. The first two lines are explicit,
+you define a system with 125 atoms all of which have the same characteristics.
 The last three lines define the volume in which these atoms are contained. It
 is a box with edge coordinates starting at 0 and ending at 5 in every direction
 (x, y and z).
@@ -102,11 +102,11 @@ orientation etc. For the velocities, some `atom_style` can require keeping
 track of angular momentum, angular velocities etc. You'll find a detailed
 description of each format in the `read_data section of the manual`_.
 
-As a first takeaway, remember that `data files` contain detailed informations
+As a first takeaway, remember that `data files` contain detailed information
 on a simulation system at a given time. They are more convenient for input and
 output. Several simulation softwares allow you to export files as LAMMPS
 `data files` and take them as input. But data format are not straightforward to
-use for analyses: they are heavy and may contain useless informations. This is
+use for analyses: they are heavy and may contain useless information. This is
 what the dump file format is for.
 
 Dump file format
@@ -139,10 +139,10 @@ with a header directly followed by the data we wanted to dump. Here we used the
 basic atom dump_style so we only have atoms' id, types and scaled coordinates
 (that is coordinates divided by box length in each dimension).
 
-You can compare the informations with the one you got from the `data file` and
-see that for now we have the same information in both files, with some
-exceptions (total number of types, masses and the velocities). Getting only the
-scaled coordinates of the atoms is a bit limited but fortunately, we can get
+You can compare the `dump file` with the `data file`, and
+see that they basically contain the same information, with few
+exceptions, namely the total number of types, masses and the velocities. Getting only the
+scaled coordinates of the atoms is not alway ideal, but fortunately we can get
 much more.
 
 In your `in.lmp` file, replace the `write_dump` line with the following:
@@ -177,7 +177,7 @@ Now the `dump.lammpstrj` file should have changed to the following:
   5 1 4 0 0 0 0 0
   ...
 
-You now have different information in your dump file. The `custom` format allows
+The `custom` format allows
 you to write every properties of each atoms to the file. There are a series of
 keywords that you can use depending on the `atom_style` and values that you
 can also calculate through the use of LAMMPS computes and variables. More on
