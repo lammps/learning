@@ -1,3 +1,5 @@
+.. _Confirmed:
+
 Confirmed Section
 =================
 

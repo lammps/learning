@@ -1,3 +1,5 @@
+.. _Advanced:
+
 Advanced Section
 ================
 

@@ -1,3 +1,5 @@
+.. _file-format:
+
 ================================
 Introduction to the file formats
 ================================
@@ -184,6 +186,6 @@ can also calculate through the use of LAMMPS computes and variables. More on
 that in later tutorials.
 
 For now on we haven't done much with our atoms. Let's see how to run an actual
-simulation.
+simulation in the :ref:`setting-up-simulations` section.
 
 .. _read_data section of the manual: https://docs.lammps.org/read_data.html

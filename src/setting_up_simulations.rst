@@ -1,3 +1,5 @@
+.. _setting-up-simulations:
+
 =================================
 Setting up your first simulations
 =================================
