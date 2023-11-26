@@ -100,10 +100,10 @@ Energy minimization
 Now that we have defined interactions between our atoms, we can compute forces
 and energy for our system. In the general case, initial geometries are guesses
 from chemical information from *real* systems, but they're not necessary
-representative of equilibrium state of the model with the interactions you
-are using. You can end-up in a situation where local structure cause force
-divergence and numerical integration becomes unstable. Bad initial geometry
-is a common problem that many people encounter without realizing.
+representative of equilibrium state of the model with the interactions you are
+using. You can end-up in a situation where some local structure causes force
+divergences and numerical integration becomes unstable. Bad initial geometry is
+a common problem that many people encounter without realizing.
 
 If you are unsure about the situation, it is good practice to minimize the
 energy of your system. Fortunately, LAMMPS allows you to do so. In short, it
@@ -123,8 +123,13 @@ You can add the following line in your `in.lmp` file.
 What this command means is "try to minimize the energy of the system 1000 times
 *or* until the energy difference between consecutive steps is less than 1
 millionth in energy units *or* until the relative force difference is less than
-100 millionth *or* it takes more than 2000 evaluation to converge in energy and
-forces". In the case of our Lennard-Jones simple crystal, this should be rather
-straight forward since we are already close to an energy minimum.
+100 millionth *or* until it takes more than 2000 evaluation to converge in
+energy and forces". In the case of our Lennard-Jones simple crystal, this
+should be rather straight forward since we are already close to an energy
+minimum.
+
+We now have an initial condiguration at minimum energy of a single crystal. It
+is now time for the "dynamics" part of "molecular dynamics" to kick-in in the
+:ref:`running-post-processing` section!
 
 .. _lj/cut: https://docs.lammps.org/pair_lj.html
