@@ -14,4 +14,4 @@ simulation softwares and practice.
    running_and_post_processing
    variables_computes_fixes
    averages_and_on_the_fly_computation
-   visualising_trajectories
+   visualizing_trajectories
