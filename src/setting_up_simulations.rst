@@ -73,7 +73,7 @@ coefficients for each type of atom. Note that the second step must be done
 **after** the number of `atom types` is defined in the simulation.
 
 It is worth detailing the format of the `pair_coeff` command. It defines
-long range interactions between atoms with regard to their types. That is the
+how nearby atoms interact, based on their types. That is the
 reason there are four values after the command: two for the types of interacting
 pairs, two for the interaction coefficients. Here we only have atoms of type 1
 so all the values are the same. If atoms of type 2 were present, we would have
