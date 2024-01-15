@@ -36,7 +36,7 @@ What this script does is:
 4. putting atoms at the coordinates defined by the lattice.
 5. giving them a mass, and writing output files.
 
-That's it. Nowhere are interaction between atoms defined. As such they do not
+That's it. Nowhere are interactions between atoms defined. As such they do not
 interact with one another. Let's change that.
 
 Edit the `in.lmp` file by adding the following lines between the `mass` and
