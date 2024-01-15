@@ -27,7 +27,7 @@ Let's have a look at the script we used in the first part: the `in.lmp` file.
 
 What this script does is:
 
-1. defining a `lattice`, which is simply a set of positions, here all the
+1. defining a `lattice<https://docs.lammps.org/lattice.html>`_, which is simply a set of positions, here all the
    combinations of {x,y,z} where each are multiples of 1.
 2. defining an abstract region containing 5 lattice cells in each direction
    and putting atoms at those positions. Since there is only one atomic
@@ -39,8 +39,8 @@ What this script does is:
 That's it. Nowhere are interactions between atoms defined. As such they do not
 interact with one another. Let's change that.
 
-Edit the `in.lmp` file by adding the following lines between the `mass` and
-`write_data` commands:
+Edit the `in.lmp` file by adding the following lines between the `mass<https://docs.lammps.org/mass.html>`_ and
+`write_data<https://docs.lammps.org/write_data.html>`_ commands:
 
 .. code-block:: LAMMPS
 
@@ -59,7 +59,7 @@ appeared: `Pair Coeffs # lj/cut`. The comment following the `#` symbol indicates
 which pair style was used when defining the non-bonded interactions in the system.
 A line starting with `#` is only indicative and will not be read by LAMMPS.
 However, it will tell you which pair style you should set before reading the
-said file. Here `lj/cut_` is the standard Lennard-Jones potential using a
+said file. Here `lj/cut<https://docs.lammps.org/pair_lj.html>`_ is the standard Lennard-Jones potential using a
 cutoff distance. Pair of atoms separated by a distance longer than the cutoff
 will not interact.
 
@@ -68,11 +68,11 @@ will not interact.
    :align: center
 
 The definition of the interaction happens in two steps. First you set an
-interaction style (here a `pair_style`). You then have to define interaction
+interaction style (here a `pair_style<https://docs.lammps.org/pair_style.html>`_). You then have to define interaction
 coefficients for each type of atom. Note that the second step must be done
 **after** the number of `atom types` is defined in the simulation.
 
-It is worth detailing the format of the `pair_coeff` command. It defines
+It is worth detailing the format of the `pair_coeff<https://docs.lammps.org/pair_coeff.html>`_ command. It defines
 how nearby atoms interact, based on their types. That is the
 reason there are four values after the command: two for the types of interacting
 pairs, two for the interaction coefficients. Here we only have atoms of type 1
