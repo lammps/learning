@@ -19,7 +19,7 @@ In an empty directory, open a text file and copy the following text inside:
 
 .. code-block:: LAMMPS
 
-atom_style atomic
+   atom_style atomic
    lattice sc 1.
    region box block 0 5 0 5 0 5
    create_box 1 box
@@ -51,8 +51,10 @@ Data file format
 
 The first file of the two is usually referred to as a `data file`. Its format
 is rather strict, containing:
+
 * a "header" block, which must come first in the file, and
 * several "data sections", each of which:
+
   * starts with a capitalized keyword (such as "Atoms" or "Velocities")
   * followed by a blank line
   * and then a block of numbers (such as each atom's ID, x, y, and z velocities in "Velocities")
