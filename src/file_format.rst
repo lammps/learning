@@ -167,7 +167,8 @@ molecular bonds and particle charges) in "parameter", "topology" or
 "configuration" files. In LAMMPS, this information is read from a `data` file, but
 the `data` file also usually contains coordinates and velocities.
 
-In your `in.lmp` file, replace the `write_dump` line with the following:
+As an example of customizing the dump file, 
+in your `in.lmp` file, replace the `write_dump` line with the following:
 
 .. code-block:: LAMMPS
 
