@@ -147,6 +147,25 @@ with a header directly followed by the data we wanted to dump. Here we used the
 basic atom dump_style so we only have atoms' id, types and scaled coordinates
 (that is coordinates divided by box length in each dimension).
 
+From the TIMESTEP heading, you might guess that a dump file will
+usually contain information about how a simulation changes `over time`,
+and you would be correct! Thus, a `data` file is used to store the `complete`
+state of a simulation with the `write_data` command, and in later lessons
+you will see how to start a new simulation from that state with the
+`read_data` command. On the other hand, a `dump` file stores information
+about how the system changes over time, and can then be used for analyzing
+simulation results.
+
+If you (or your supervisor) have previously used other molecular dynamics
+software, you may recognize that the dump file loosely corresponds to "coordinates"
+or "trajectory" output files from other software. However, LAMMPS gives you
+great flexibility in what you choose to output. For example, the default `dump` format
+outputs scaled coordinates, but we will soon see how to output unscaled
+coordinates instead. You may know that other molecular dynamics packages
+store information that `does not` change throughout a simulation (such as
+molecular bonds and particle charges) in "parameter", "topology" or
+"configuration" files. In LAMMPS, this information is read from a `data` file, but
+the `data` file also usually contains coordinates and velocities.
 You can compare the `dump file` with the `data file`, and
 see that they basically contain the same information, with few
 exceptions, namely the total number of types, masses and the velocities. Getting only the
