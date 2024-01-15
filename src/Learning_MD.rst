@@ -24,13 +24,14 @@ of molecular simulation.
 
 These tutorials assume you are familiar with text file manipulation, basic
 command-line use and your computer environment. They also assume you already
-have LAMMPS executable installed. If not, contact your IT departement or follow
-the `installation guide <https://docs.lammps.org/Install.html>`_ from the
-manual. If necessary, also see `how to run LAMMPS executable dedicated
-section. <https://docs.lammps.org/Run_head.html>`_ LAMMPS usage is generally
-easier on UNIX like systems (Linux distributions, macOS) so most examples will
-assume this type of environment. On Windows systems, you can set-up WSL to be
-in an equivalent environment.
+have the last version of LAMMPS executable installed. If not, contact your IT
+departement or follow the `installation guide
+<https://docs.lammps.org/Install.html>`_ from the manual. If necessary, also
+see `how to run LAMMPS executable dedicated section.
+<https://docs.lammps.org/Run_head.html>`_ LAMMPS usage is generally easier on
+UNIX like systems (Linux distributions, macOS) so most examples will assume
+this type of environment. On Windows systems, you can set-up WSL to be in an
+equivalent environment.
 
 As for now the tutorial is organised in three main sections, mainly:
 
