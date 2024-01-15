@@ -19,6 +19,7 @@ In an empty directory, open a text file and copy the following text inside:
 
 .. code-block:: LAMMPS
 
+atom_style atomic
    lattice sc 1.
    region box block 0 5 0 5 0 5
    create_box 1 box
