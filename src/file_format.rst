@@ -99,14 +99,15 @@ Each lines gives the particle ID followed by the instantaneous velocities of
 the particles along the x, y and z axis in that order. The particle ID refers
 to the same ID as in the `Atoms` section.
 
-The format and meaning of the number in the `Atoms` and `Velocities` sections
-will depend on the `atom_style` the code is told to use. In most recents
-versions of LAMMPS, writing a data file with `write_data` will append a comment
-next to the `Atoms` section name (here `# atomic`). This helps human readers to
-know the meaning of the different number. Some formats can include more
-information like a molecule tag, particles' charges, particles' spins or
-orientation etc. For the velocities, some `atom_style` can require keeping
-track of angular momentum, angular velocities etc. You'll find a detailed
+This data file is quite simple because our Very First LAMMPS Script had the
+`atom_style` `atomic`, where each particle only has an ID number 
+and a three-dimensional position and velocity (and periodic image location).
+More detailed simulations will use other `atom_style` commands,
+such as `atom_style molecular`, which also tracks molecule ID
+numbers and intramolecular arrangements like bonds,
+angles, "dihedrals" and "impropers" (which you will learn about later).
+You can see that LAMMPS includes a comment `# atomic` next to the
+`Atoms` section name (here `# atomic`), and you can find a detailed
 description of each format in the `read_data section of the manual`_.
 
 As a first takeaway, remember that `data files` contain detailed information
