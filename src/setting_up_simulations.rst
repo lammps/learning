@@ -109,7 +109,7 @@ If you are unsure about the situation, it is good practice to minimize the
 energy of your system. Fortunately, LAMMPS allows you to do so. In short, it
 makes atoms slowly go along their energy gradients. By default, the `minimize
 <https://docs.lammps.org/minimize.html>`_ command uses conjugate gradients
-algorithm to this end.
+algorithm [Classics]_ to this end.
 
 You can add the following line in your `in.lmp` file.
 
@@ -132,4 +132,4 @@ We now have an initial condiguration at minimum energy of a single crystal. It
 is now time for the "dynamics" part of "molecular dynamics" to kick-in in the
 :ref:`running-post-processing` section!
 
-.. _lj/cut: https://docs.lammps.org/pair_lj.html
+.. [Classics] Classical textbooks
