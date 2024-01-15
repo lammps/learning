@@ -142,7 +142,7 @@ have appeared in your directory. This is a `dump file` containing a single
   5 1 0.8 0 0
   ...
 
-The format is more simple compared to the data file. Each section is labeled
+The dump file format is simpler than the data file. Each section is labeled
 with a header directly followed by the data we wanted to dump. Here we used the
 basic atom dump_style so we only have atoms' id, types and scaled coordinates
 (that is coordinates divided by box length in each dimension).
