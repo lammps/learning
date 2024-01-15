@@ -83,12 +83,8 @@ but all of them must come in the format:
    Section input # Number of line and format depend on the section.
 
 The first section you should see is the `Masses` section. In LAMMPS, masses are
-assigned to atom types so you only have one line here. All types have their own
-masses but several types can have the same mass. Types are LAMMPS way to refer
-to properties of particles that are *the same* for all particles of *the same
-type*. They are also used to determine how particles interact with one another.
-Types are not always binded to chemical species and you will see in further
-tutorials how it can be convenient to define different types for similar atoms.
+usually assigned by atom types. Since you have only one atom type
+in this simulation, this `Masses` section has only one line.
 
 The `Atoms` section contains 125 lines, one per atom. The number on each line
 are ordered and are for each particle:
