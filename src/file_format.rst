@@ -49,9 +49,14 @@ Data file format
 ****************
 
 The first file of the two is usually referred to as a `data file`. Its format
-is rather strict and you can see that there are general information at the
-top of the file and several sections starting with a capitalized word, a blank
-line and some numbers. Let's slowly go through all of this.
+is rather strict, containing:
+* a "header" block, which must come first in the file, and
+* several "data sections", each of which:
+  * starts with a capitalized keyword (such as "Atoms" or "Velocities")
+  * followed by a blank line
+  * and then a block of numbers (such as each atom's ID, x, y, and z velocities in "Velocities")
+
+Let's slowly go through all of this.
 
 The first part of the file is called `the header`. The first line of the file
 is always a comment that LAMMPS does not read but which can contain
