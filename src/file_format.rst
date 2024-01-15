@@ -66,6 +66,9 @@ the number of `atoms` (125), the number of `atom types` (1) and three lines
 containing `xlo xhi` like indications. This header is simple, but generally,
 headers can contain much more information. The first two lines are explicit,
 you define a system with 125 atoms all of which have the same characteristics.
+They all have the same characteristics because your simulation has only one `atom type`;
+you will soon learn how to specify different interactions between particles
+in LAMMPS by giving the particles different atom types.
 The last three lines define the volume in which these atoms are contained. It
 is a box with edge coordinates starting at 0 and ending at 5 in every direction
 (x, y and z).
