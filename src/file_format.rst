@@ -166,11 +166,6 @@ store information that `does not` change throughout a simulation (such as
 molecular bonds and particle charges) in "parameter", "topology" or
 "configuration" files. In LAMMPS, this information is read from a `data` file, but
 the `data` file also usually contains coordinates and velocities.
-You can compare the `dump file` with the `data file`, and
-see that they basically contain the same information, with few
-exceptions, namely the total number of types, masses and the velocities. Getting only the
-scaled coordinates of the atoms is not alway ideal, but fortunately we can get
-much more.
 
 In your `in.lmp` file, replace the `write_dump` line with the following:
 
