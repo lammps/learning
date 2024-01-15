@@ -40,6 +40,14 @@ As for now the tutorial is organised in three main sections, mainly:
    want to know how to do more refined things in LAMMPS.
 3. Confirmed: Detailed discussions on the howto examples from the manual.
 
+.. note:
+   As this is a LAMMPS tutorial and not a molecular simulation tutorial, some
+   topics of general knowledge will not be covered in details here. You will
+   find more information in classical textbooks such as Allen and Tildesley
+   "Computer simulation of fluids", Frenkel and Smit "Understanding molecular
+   simulation" and many others statistical physics textbooks. Such topics shall
+   be noted with a reference to "Classical textbooks".
+
 ****************
 Table of content
 ****************
