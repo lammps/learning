@@ -110,12 +110,9 @@ You can see that LAMMPS includes a comment `# atomic` next to the
 `Atoms` section name (here `# atomic`), and you can find a detailed
 description of each format in the `read_data section of the manual`_.
 
-As a first takeaway, remember that `data files` contain detailed information
-on a simulation system at a given time. They are more convenient for input and
-output. Several simulation softwares allow you to export files as LAMMPS
-`data files` and take them as input. But data format are not straightforward to
-use for analyses: they are heavy and may contain useless information. This is
-what the dump file format is for.
+You may have noticed our first LAMMPS script also produced a `dump file`.
+We will now read through this dump file, and then learn how it is
+different from a data file and how to use each file type.
 
 Dump file format
 ****************
